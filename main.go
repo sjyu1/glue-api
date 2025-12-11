@@ -341,6 +341,11 @@ func main() {
 			license.GET("/isLicenseExpired", c.IsLicenseExpired)
 			license.GET("/controlHostAgent/:action", c.ControlHostAgent)
 		}
+		user := v1.Group("/user")
+		{
+			user.POST("/:username", c.UserCreate)
+			user.DELETE("/:username", c.UserDelete)
+		}
 		/*
 		   admin := v1.Group("/admin")
 		   {
