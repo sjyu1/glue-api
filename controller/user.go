@@ -42,10 +42,10 @@ func (c *Controller) UserCreate(ctx *gin.Context) {
 //	@Summary		Delete User of Service
 //	@Description	서비스 사용자를 삭제합니다.
 //	@Tags			USER
-//	@param			username     formData   string	true    "Username"
+//	@param			username     path   string	true    "Username"
 //	@Accept			x-www-form-urlencoded
 //	@Produce		json
-//	@Success		200	{string}	model.UserStatus
+//	@Success		200	{string}	string	"Success"
 //	@Failure		400	{object}	httputil.HTTP400BadRequest
 //	@Failure		404	{object}	httputil.HTTP404NotFound
 //	@Failure		500	{object}	httputil.HTTP500InternalServerError
